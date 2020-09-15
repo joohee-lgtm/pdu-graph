@@ -8,16 +8,28 @@
   />
 </head>
 <body>
-  <div id="chart" style="width: 100wh; height: 100wh"></div>
+  <div id="chart"></div>
 
   <script src="./rank/seasons2.js"></script>
   <script src="./rank/seasons3.js"></script>
   <script src="./rank/seasons4.js"></script>
   <script>
     window.addEventListener("load", () => {
-      var filtered = s4.filter((item) => {
+      var data = {
+        2: s2,
+        3: s3,
+        4: s4,
+      };
+
+      var season = window.location.search.match(/(?!\?season\=)[\d]/) || [4];
+      var filtered = data[season[0]].filter((item) => {
         return item.length > 5;
       });
+
+      var chart = document.querySelector("#chart");
+
+      chart.style.width = `${window.innerWidth}`;
+      chart.style.height = `${window.innerHeight - 100}`;
 
       var chart = bb.generate({
         data: {
