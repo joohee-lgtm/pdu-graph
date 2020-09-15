@@ -1,0 +1,24 @@
+{
+  "name": "pdu-graph",
+  "version": "0.0.1",
+  "description": "쓸데없는. .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/real-dot-joohee/pdu-graph.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/real-dot-joohee/pdu-graph/issues"
+  },
+  "homepage": "https://github.com/real-dot-joohee/pdu-graph#readme",
+  "dependencies": {
+    "crawler": "^1.2.2",
+    "jsdom": "^16.4.0",
+    "node-html-crawler": "^1.1.3"
+  }
+}
